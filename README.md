@@ -17,7 +17,7 @@ To work with Rack we need to create a new class that responds to a single method
 
 Using this, let's create a basic web app. Follow along with the below instructions. 
 
-We first create a `Rack::Response` object, then add some text "Hello, World" to the body, and complete the response with the `#finish` method. By default, Rack sets our status codes and headers.
+We first create a `Rack::Response` object, then add some text "Hello, World" to the body, and complete the response with the `#finish` method. By default, Rack sets our status codes and headers. Don't worry about the `env` input. This holds all of the *request* info in it and we will use it later!
 
 ```ruby
 class Application
