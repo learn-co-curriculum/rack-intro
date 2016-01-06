@@ -40,7 +40,7 @@ require_relative "./application.rb"
 run Application.new
 ```
 
-To run this code we then run `rackup config.ru`. Everything goes as planned, you'll see:
+To run this code we then run `rackup config.ru`. If you're using an Integrated Development Environment, such as Nitrous, you may need to use `rackup config.ru -b 0.0.0.0`. Everything goes as planned, you'll see:
 
 ```
 [2015-11-27 16:48:22] INFO  WEBrick 1.3.1
@@ -48,7 +48,7 @@ To run this code we then run `rackup config.ru`. Everything goes as planned, you
 [2015-11-27 16:48:22] INFO  WEBrick::HTTPServer#start: pid=11275 port=9292
 ```
 
-Notice it says `port=9292`. If you open your browser and go to `http://localhost:9292/` you should see `Hello, World`. Congrats! You just made your first web app!
+Notice it says `port=9292`. If you open your browser and go to `http://localhost:9292/` you should see `Hello, World`. In Nitrous, use the 'Preview' feature on port 9292. Congrats! You just made your first web app!
 
 Let's deconstruct this URL a little bit though. The URL is `http://localhost:9292/`. The protocol is `http`. That makes sense, but the domain is `localhost:9292`. What's going on there? `localhost` is normally where a server like `google.com` goes. In this case, since you are running the server on your computer, `localhost` is the server name of your own computer. Nobody else can get that URL though. That's good for right now. This allows you to play around with writing websites without the security concerns of opening it up to the entire web. The last part of that URL is the `:9292` section. This the "port number" of your server. Don't worry too much about this, but you may want to run multiple servers on one computer and having different ports allows them to be running simultaneously without conflicting. The resource that you are requesting is `/`. This is effectively like saying the home or default.
 
