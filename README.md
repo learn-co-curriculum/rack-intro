@@ -54,4 +54,4 @@ Let's deconstruct this URL a little bit though. The URL is `http://localhost:929
 
 Now it's your turn. Modify your app to introduce yourself by saying "Hello, my name is <YOUR NAME>". To exit the running web server and get back to your terminal press CTRL-C. **You will have to do this every time you change your code**.
 
-<a href='https://learn.co/lessons/rack-intro' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rack-intro' title='Inspecting The Web With Rack'>Inspecting The Web With Rack</a> on Learn.co and start learning to code for free.</p>
