@@ -40,7 +40,7 @@ require_relative "./application.rb"
 run Application.new
 ```
 
-To run this code we then run `rackup config.ru`. If you're using an Integrated Development Environment, such as Nitrous, you may need to use `rackup config.ru -b 0.0.0.0`. Everything goes as planned, you'll see:
+To run this code we then run `rackup config.ru`. If you're using an Integrated Development Environment, such as Nitrous, you may need to use `rackup config.ru --host 0.0.0.0`. Everything goes as planned, you'll see:
 
 ```
 [2015-11-27 16:48:22] INFO  WEBrick 1.3.1
@@ -55,3 +55,5 @@ Let's deconstruct this URL a little bit though. The URL is `http://localhost:929
 Now it's your turn. Modify your app to introduce yourself by saying "Hello, my name is <YOUR NAME>". To exit the running web server and get back to your terminal press CTRL-C. **You will have to do this every time you change your code**.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rack-intro' title='Inspecting The Web With Rack'>Inspecting The Web With Rack</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rack-intro'>Inspecting the Web with Rack</a> on Learn.co and start learning to code for free.</p>
