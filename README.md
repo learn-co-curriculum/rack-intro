@@ -40,7 +40,7 @@ require_relative "./application.rb"
 run Application.new
 ```
 
-To run this code we then run `rackup config.ru`. If you're using an Integrated Development Environment, such as Nitrous, you may need to use `rackup config.ru -b 0.0.0.0`. Everything goes as planned, you'll see:
+To run this code we then run `rackup config.ru`. If you're using an Integrated Development Environment, such as Nitrous, you may need to use `rackup config.ru -b 0.0.0.0` or `rackup config.ru --host 0.0.0.0`. Everything goes as planned, you'll see:
 
 ```
 [2015-11-27 16:48:22] INFO  WEBrick 1.3.1
