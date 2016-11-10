@@ -48,10 +48,11 @@ To run this code we then run `rackup config.ru`. If you're using an Integrated D
 [2015-11-27 16:48:22] INFO  WEBrick::HTTPServer#start: pid=11275 port=9292
 ```
 
-Notice it says `port=9292`. If you open your browser and go to `http://localhost:9292/` you should see `Hello, World`. In Nitrous, use the 'Preview' feature on port 9292. Congrats! You just made your first web app!
+Notice it says `port=9292`. If you open your browser and go to `http://localhost:9292/` you should see `Hello, World`. 
+
+>Note: If you're using the Learn IDE, you won't be able to get to your website with `localhost`. Instead, you'll see a line that looks something like this - `Starting server on 159.203.101.28:30001`. To see the webpage, just go to `159.203.101.28:30001` in your web browser. Anywhere these instructions tell you to go to `localhost`, replace that with this IP address instead!
 
 Let's deconstruct this URL a little bit though. The URL is `http://localhost:9292/`. The protocol is `http`. That makes sense, but the domain is `localhost:9292`. What's going on there? `localhost` is normally where a server like `google.com` goes. In this case, since you are running the server on your computer, `localhost` is the server name of your own computer. Nobody else can get that URL though. That's good for right now. This allows you to play around with writing websites without the security concerns of opening it up to the entire web. The last part of that URL is the `:9292` section. This the "port number" of your server. Don't worry too much about this, but you may want to run multiple servers on one computer and having different ports allows them to be running simultaneously without conflicting. The resource that you are requesting is `/`. This is effectively like saying the home or default.
 
 Now it's your turn. Modify your app to introduce yourself by saying "Hello, my name is <YOUR NAME>". To exit the running web server and get back to your terminal press CTRL-C. **You will have to do this every time you change your code**.
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rack-intro' title='Inspecting The Web With Rack'>Inspecting The Web With Rack</a> on Learn.co and start learning to code for free.</p>
+<p class='util--hide'>View <a href='https://learn.co/lessons/rack-intro'>Inspecting the Web with Rack</a> on Learn.co and start learning to code for free.</p>
