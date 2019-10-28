@@ -22,17 +22,16 @@ explain how all cars work by:
 >  Explosions made by gasoline and fire make an inside wheel go round and that
 >  inside wheel makes the outside wheels go round"
 
-In the same way we can say that all web servers:
+In the same way, we can say that all web servers:
 
 > They look at an HTTP request and look at the HTTP verb and path and then run
 > some conditional logic to find out which stuff to send back
 
 In Ruby, this idea of "a common foundation for all web-server like things" is
 capture din a gem called [Rack](https://rack.github.io/). Rails "rides on top
-of" Rack. Sinatra "rides on top of" Rack. Micro web servers on small hardware
-boards "ride on top of" Rack. In fact, the idea of a base, common web-server
-library was such a good idea, other languages like Python and Node.JS
-implemented their own "base" web server.
+of" Rack. Sinatra "rides on top of" Rack. In fact, the idea of a base, common
+web-server library was such a good idea, other languages like Python and
+Node.JS implemented their own "base" web server.
 
 
 Before we get to the complexity of things built on top of Rack, let's get a
@@ -75,14 +74,16 @@ html_from_file = File.open("my_html.html").readlines
 
 Using this, let's create a basic web app. Follow along with the below instructions. 
 
-Let's create a file called `first.ru`. File that are used by Rack end with
-`.ru` instead of `.rb`. It's a way to say "Hey this is a server."
+Let's create a file called `first.ru`. Files that are used by Rack end with
+`.ru` instead of `.rb` because they're normally loaded with a command called
+`rackup`. It's a way to say "Hey this is a server definition" to anyone
+casually using `ls` in the directory.
 
 ```ruby
 require 'rack'
 
 # Instances of Proc automatically have a call method that runs the block that
-# they're intiialized with.
+# they're initialized with.
 my_server = Proc.new do
   [200, { 'Content-Type' => 'text/html' }, ['<em>Hello</em>']]
 end
@@ -157,8 +158,8 @@ It's not too far of a step from this "conditional" logic to realize that if a
 web server knew what was after the `/` in the URL path, it could make
 decisions, run logic, etc. and change what's displayed in response to what's in
 the URL. That's basically what web servers do all day long. Rails, Sinatra, any
-web programming framework is basically a way to organize the code that fills
-out that third `Array` element in our Rack responses. Amazing!
+web programming framework is a way to organize the code that fills out that
+third `Array` element in our Rack responses. Amazing!
 
 We could make things look a bit more like a web server by taking our server
 code out of the `rackup` file and put it into a class file. We could create:
