@@ -136,6 +136,8 @@ responds to `#call`, Rack will let us make a substitution.
 Create a new file called `second.ru` and fill it out like:
 
 ```ruby
+require 'rack'
+
 # Something that responds to call, that's what Rack demands
 class MyServer
   def call(env)
