@@ -28,11 +28,10 @@ In the same way, we can say that all web servers:
 > some conditional logic to find out which stuff to send back
 
 In Ruby, this idea of "a common foundation for all web-server like things" is
-capture din a gem called [Rack](https://rack.github.io/). Rails "rides on top
+captured in a gem called [Rack](https://rack.github.io/). Rails "rides on top
 of" Rack. Sinatra "rides on top of" Rack. In fact, the idea of a base, common
 web-server library was such a good idea, other languages like Python and
 Node.JS implemented their own "base" web server.
-
 
 Before we get to the complexity of things built on top of Rack, let's get a
 simple server working on Rack.
@@ -113,18 +112,19 @@ Rack will print out something like:
 
 Let's deconstruct this URL a little bit though. The URL is
 `http://localhost:9292/`. The protocol is `http`. That makes sense, but the
-domain is `localhost:9292`. What's going on there? `localhost` is normally
-where a server like `google.com` goes. In this case, since you are running the
-server on your computer, `localhost` is the server name of your own computer.
-Nobody else can get that URL though. That's good for right now. This allows you
-to play around with writing websites without the security concerns of opening
-it up to the entire web. The last part of that URL is the `:9292` section. This
-the "port number" of your server. Don't worry too much about this, but you may
-want to run multiple servers on one computer and having different ports allows
-them to be running simultaneously without conflicting. The resource that you
-are requesting is `/`. This is effectively like saying the home or default.  If
-you're doing local development, you should be able to go to
-`http://localhost:9292` and see _Hello_ printed out by your web server!
+domain is `localhost:9292`. What's going on there? `localhost` is normally where
+a server like `google.com` goes. In this case, since you are running the server
+on your computer, `localhost` is the server name of your own computer. Nobody
+else can get that URL though. That's good for right now. This allows you to play
+around with writing websites without the security concerns of opening it up to
+the entire web. The last part of that URL is the `:9292` section. This the "port
+number" of your server. Don't worry too much about this, but you may want to run
+multiple servers on one computer and having different ports allows them to be
+running simultaneously without conflicting.
+
+The resource that you are requesting is `/`. This is effectively like saying the
+home or default.  If you're doing local development, you should be able to go to
+`http://localhost:9292/` and see _Hello_ printed out by your web server!
 
 Feel free to change `first.ru` to add changes to your web server. If you make
 changes to `first.ru` ***you'll have to shut down the server (Control-C) and
@@ -156,7 +156,7 @@ emphatic; when odd, it's strong.
 
 It's not too far of a step from this "conditional" logic to realize that if a
 web server knew what was after the `/` in the URL path, it could make
-decisions, run logic, etc. and change what's displayed in response to what's in
+decisions, run logic, etc... and change what's displayed in response to what's in
 the URL. That's basically what web servers do all day long. Rails, Sinatra, any
 web programming framework is a way to organize the code that fills out that
 third `Array` element in our Rack responses. Amazing!
@@ -187,10 +187,6 @@ run MyServer.new
 Now we're honoring the way most Rack applications are built: the server setup
 code lives in the `rackup` file and our application logic lives in a class
 that's referenced by the `run` command in the `rackup` file.
-
-
-
-
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/rack-intro'>Inspecting the Web with Rack</a> on Learn.co and start learning to code for free.</p>
 
