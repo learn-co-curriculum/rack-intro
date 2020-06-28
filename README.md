@@ -190,7 +190,5 @@ Now we're honoring the way most Rack applications are built: the server setup
 code lives in the `rackup` file and our application logic lives in a class
 that's referenced by the `run` command in the `rackup` file.
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/rack-intro'>Inspecting the Web with Rack</a> on Learn.co and start learning to code for free.</p>
-
 [proc]: https://docs.ruby-lang.org/en/2.0.0/Proc.html
 [http-status]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
