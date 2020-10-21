@@ -166,8 +166,9 @@ third `Array` element in our Rack responses. Amazing!
 We could make things look a bit more like a web server by taking our server
 code out of the `rackup` file and put it into a class file. We could create:
 
-`my_server.rb`
 ```ruby
+# ./my_server.rb
+
 class MyServer
   def call(env)
     return [ 200, {'Content-Type' => 'text/html'}, pretty_response ]
