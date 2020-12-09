@@ -1,5 +1,6 @@
 require 'spec_helper.rb'
 
+
 describe "MyServer" do
   it "should say hello" do
     get "/"
